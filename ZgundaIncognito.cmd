@@ -20,6 +20,6 @@ echo %LOCALAPPDATA%.\Google\Chrome\%TempFolder%
 
 start "" /WAIT "%ProgramFiles(x86)%.\Google\Chrome\Application\chrome.exe" --user-data-dir="%LOCALAPPDATA%.\Google\Chrome\%TempFolder%" --start-maximized --no-first-run --homepage "chrome:blank" --incognito %TargetUrl%
 
-sdelete -accepteula -s -q "%LOCALAPPDATA%.\Google\Chrome\%TempFolder%\*"
+"%~dp0.\sdelete.exe" -accepteula -s -q "%LOCALAPPDATA%.\Google\Chrome\%TempFolder%\*"
 
 rmdir "%LOCALAPPDATA%.\Google\Chrome\%TempFolder%" /s /q
