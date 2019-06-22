@@ -1,0 +1,1 @@
+CreateObject("Wscript.Shell").Run Replace(WScript.Arguments(0), "'", """"), 0, False
